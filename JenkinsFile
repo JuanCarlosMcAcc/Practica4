@@ -21,7 +21,7 @@ spec:
     stages{
         stage("Prepare Environment"){
             steps{
-                echo "-=- Prepare build environment_ -=-"
+                echo "-=- Prepare build environment -=-"
                 sh 'java -version'
             }
         }
