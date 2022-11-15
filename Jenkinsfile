@@ -37,6 +37,7 @@ spec:
         stage("Compile"){
             steps{
                 echo "-=- Prepare build environment -=-"
+                sh 'podman version'
             }
         }
     }
