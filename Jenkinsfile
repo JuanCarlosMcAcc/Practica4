@@ -15,6 +15,14 @@ spec:
           - sleep
         args:
           - infinity
+      - name: podman
+        image: quay.io/containers/podman:v4.2.0
+        command:
+          - sleep
+        securityContext:
+          runAsUser: 0
+          privileged: true
+
 '''
         }
     }
@@ -24,6 +32,11 @@ spec:
                 echo "-=- Prepare build environment -=-"
                 sh 'java -version'
                 echo "Arriba se muestra la version de JAVA"
+            }
+        }
+        stage("Compile"){
+            steps{
+                echo "-=- Prepare build environment -=-"
             }
         }
     }
