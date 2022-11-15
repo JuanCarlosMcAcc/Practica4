@@ -41,13 +41,15 @@ spec:
             steps{
                 echo "-=- Prepare build environment -=-"
                 sh 'java -version'
-                echo "Arriba se muestra la version de JAVA"
+                container('podman'){
+                    sh 'podman --version'
+                }
             }
         }
         stage("Compile"){
             steps{
                 echo "-=- Prepare build environment -=-"
-                sh 'podman --version'
+
             }
         }
     }
