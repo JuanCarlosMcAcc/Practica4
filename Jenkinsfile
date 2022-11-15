@@ -19,6 +19,8 @@ spec:
         image: quay.io/containers/podman:v4.2.0
         command:
           - sleep
+        args:
+          - infinity
         securityContext:
           runAsUser: 0
           privileged: true
