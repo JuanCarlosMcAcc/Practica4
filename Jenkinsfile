@@ -30,8 +30,6 @@ spec:
           - sleep
         args:
           - infinity
-    imagePullSecrets:
-      - name: master-acr-credentials
 '''
         }
     }
@@ -48,7 +46,6 @@ spec:
         stage("Compile"){
             steps{
                 echo "-=- Prepare build environment -=-"
-
             }
         }
     }
