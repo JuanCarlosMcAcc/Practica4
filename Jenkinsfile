@@ -24,12 +24,7 @@ spec:
         securityContext:
           runAsUser: 0
           privileged: true
-      - name: aks
-        image: acrdvpsplatformdev.azurecr.io/devops-platform-image:v0.0.5
-        command:
-          - sleep
-        args:
-          - infinity
+
 '''
         }
     }
@@ -46,6 +41,7 @@ spec:
         stage("Compile"){
             steps{
                 echo "-=- Prepare build environment -=-"
+
             }
         }
     }
