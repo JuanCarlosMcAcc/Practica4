@@ -45,7 +45,7 @@ spec:
                                 passwordVariable: 'AAD_SERVICE_PRINCIPAL_CLIENT_SECRET'),
                             string(crentialsId: 'aks-tenant', variable: 'AKS_TENANT'),
                             string(crentialsId: 'aks-resource-group', variable: 'AKS_RESOURCE_GROUP'),
-                            string(crentialsId: 'aks-name', variable: 'AKS_NAME')]),{
+                            string(crentialsId: 'aks-name', variable: 'AKS_NAME')]) {
                         sh "az login --service-principal --username ${AAD_SERVICE_PRINCIPAL_CLIENT_ID}",
                         sh "az aks get-credentials --resource-group ${AKS_RESOURCE_GROUP} --name ${AKS_NAME}",
                         sh 'kubelogin convert-kubeconfig -l spn'
