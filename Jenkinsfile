@@ -50,7 +50,7 @@ spec:
                                 usernameVariable: 'AAD_SERVICE_PRINCIPAL_CLIENT_ID',
                                 passwordVariable: 'AAD_SERVICE_PRINCIPAL_CLIENT_SECRET'),
                             string(crendentialsId: 'aks-tenant', variable: 'AKS_TENANT'),
-                            string(crendentialsId: 'aks_resource_group', variable: 'AKS_RESOURCE_GROUP'),
+                            string(crendentialsId: 'aks-resource-group', variable: 'AKS_RESOURCE_GROUP'),
                             string(crendentialsId: 'aks-name', variable: 'AKS_NAME')]) {
                         sh "az login --service-principal --username ${AAD_SERVICE_PRINCIPAL_CLIENT_ID}"
                         sh "az aks get-credentials --resource-group ${AKS_RESOURCE_GROUP} --name ${AKS_NAME}"
