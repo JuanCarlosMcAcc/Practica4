@@ -40,6 +40,7 @@ spec:
             steps{
                 echo "-=- Prepare build environment -=-"
                 sh 'java -version'
+                sh '.mvnw compile'
                 container('podman'){
                     sh 'podman --version'
                 }
@@ -58,6 +59,12 @@ spec:
                         sh 'kubectl version'
                     }
                 }
+            }
+        }
+        stage("Compile"){
+            steps{
+                echo "-=- compile code -=-"
+                sh '.mvnw compile'
             }
         }
 
