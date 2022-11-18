@@ -57,9 +57,8 @@ spec:
         stage("Compile"){
             steps{
                 echo "-=- Prepare build environment -=-"
-
+                sh '.mvnw compile'
             }
         }
     }
-
 }
