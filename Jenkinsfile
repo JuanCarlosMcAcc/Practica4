@@ -64,7 +64,7 @@ spec:
         stage("Compile"){
             steps{
                 echo "-=- compile code -=-"
-                sh '.mvnw compile'
+                // sh '.mvnw compile'
             }
         }
 
