@@ -42,7 +42,7 @@ spec:
                 sh 'java -version'
                 sh 'ls'
                 sh 'chmod +x ./mvnw'
-                sh 'mvnw --version'
+                sh './mvnw --version'
                 container('podman'){
                     sh 'podman --version'
                 }
