@@ -40,6 +40,7 @@ spec:
             steps{
                 echo "-=- Prepare build environment -=-"
                 sh 'java -version'
+                sh 'ls'
                 sh 'chmod +x ./mvnw'
                 sh './mvnw --version'
                 container('podman'){
